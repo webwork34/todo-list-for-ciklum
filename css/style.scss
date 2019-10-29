@@ -1,0 +1,244 @@
+@import 'icons';
+
+
+$border: 1px solid green;
+
+$border1: 1px solid black;
+$border2: 2px solid black;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+button{
+    padding: 10px 25px;
+    border-radius: 10px;
+    user-select: none;
+    outline: none;
+    font-size: 16px;
+}
+header{
+    border-bottom: 2px solid black;
+    padding: 20px;
+}
+
+main{
+    min-height: 80vh;
+    position: relative;
+
+    .createEditWindow{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+        display: none;
+
+        .subCont{
+            width: 300px;
+            height: 430px;
+            border: $border2;
+            margin: 70px auto;
+            background: white;
+            padding: 20px;
+
+            #title{
+                font-size: 16px;
+                padding: 5px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            #description{
+                width: 100%;
+                height: 100px;
+                resize: none;
+                padding: 5px;
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            #subPriority{
+                width: 100%;
+                font-size: 16px;
+                padding: 5px;
+                margin-bottom: 100px;
+            }
+            #cancel,
+            #save{
+                width: 49%;
+            }
+        }
+    }
+
+    .mainCont{
+        width: 95%;
+        height: 95%;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 16px;
+        // border: $border;
+
+        .height{
+            height: 40px;
+        }
+        .inpDiv{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            // border: $border;
+
+            label{
+                width: 40%;
+                position: relative;
+    
+                #search{
+                    width: 100%;
+                    font-size: inherit;
+                    padding-left: 40px;
+                }
+            }
+            
+            label:before{
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+            select{
+                width: 20%;
+                font-size: inherit;
+            }
+            
+            #create{
+                padding: 10px 25px;
+                font-size: inherit;
+                border-radius: 10px;
+                user-select: none;
+                outline: none;
+            }
+        }
+
+        .field{
+            // border: $border;
+            width: 100%;
+            height: 100%;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .newTask{
+                border: $border2;
+                width: 250px;
+                height: 250px;
+                margin-bottom: 10px;
+                padding: 10px;
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+
+                .done{
+                    width: 15px;
+                    height: 15px;
+                    border: $border2;
+                    position: absolute;
+                    right: -2px;
+                    top: -8px;
+                    background: white;
+                    display: none;
+                }
+                .done::before{
+                    content: '';
+                    display: block;
+                    width: 5px;
+                    height: 7px;
+                    border-bottom: 2px solid green;
+                    border-right: 2px solid green;
+                    transform: rotate(45deg);
+                    margin-left: 2px;
+                }
+                p{
+                    width: 100%;
+                    height: 100px;
+                    margin-top: 10px;
+                    // border: $border;
+                }
+                .priorityDiv{
+                    width: 90px;
+                    height: 40px;
+                    border: 1px dashed black;
+                    border-radius: 10%;
+                    margin-top: 20px;
+                    text-align: center;
+                    line-height: 40px;
+                }
+                .stateDiv{
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+                    line-height: 32px;
+                    border: $border1;
+                    border-radius: 10%;
+                    margin-top: 20px;
+                    cursor: pointer;
+                    // position: absolute
+                }
+                .stateMenu{
+                    width: 100px;
+                    height: 93px;
+                    background: white;
+                    border: $border1;
+                    position: absolute;
+                    bottom: -84px;
+                    right: 10px;
+                    cursor: pointer;
+                    text-align: center;
+                    display: none;
+                    z-index: 1;
+
+                    .arrow{
+                        width: 19px;
+                        height: 19px;
+                        border-top: $border1;
+                        border-left: $border1;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: -11px;
+                        left: 46px;
+                    }
+                    .stateDone,
+                    .stateEdit,
+                    .stateDelete{
+                        border-bottom: $border1;
+                        height: 30px;
+                        line-height: 30px;
+                        background: lightgray;
+                    }
+                    .stateDelete{
+                        border-bottom: none;
+                    }
+                    .stateDone:hover,
+                    .stateEdit:hover,
+                    .stateDelete:hover{
+                        background: white;
+                    }
+                }
+                .show{
+                    display: block;
+                }
+            }
+        }
+    }
+
+}
+
+footer{
+    border-top: 2px solid black;
+    padding: 20px;
+}

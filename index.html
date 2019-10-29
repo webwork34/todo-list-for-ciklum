@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>to do list</title>
+</head>
+<body>
+    <header>
+        <h1>TODOList</h1>
+    </header>
+
+    <main>
+        <div class="createEditWindow">
+            <div class="subCont">
+                <h3>Title:</h3>
+                <input type="text" id="title" placeholder="Title">
+
+                <h3>Description:</h3>
+                <textarea id="description" placeholder="Description"></textarea>
+
+                <h3>Priority:</h3>
+                <select id="subPriority" class="height">
+                    <option value="high" selected>High</option>
+                    <option value="normal">Normal</option>
+                    <option value="low">Low</option>
+                </select>
+
+                <button id="cancel">Cancel</button>
+                <button id="save">Save</button>
+            </div>
+        </div>
+
+        <div class="mainCont">
+            <div class="inpDiv">
+
+                <label for="search" class="icon-search">
+                    <input type="search" id="search" class="height" placeholder="search by title">
+                </label>
+            
+                <select id="status" class="height">
+                    <option value="all" selected>all</option>
+                    <option value="open">open</option>
+                    <option value="done">done</option>
+                </select>
+            
+                <select id="priority" class="height">    
+                    <!-- onchange на select и смотреть его value-->
+                    <option value="all" selected>all</option>
+                    <option value="high">high</option>
+                    <option value="normal">normal</option>
+                    <option value="low">low</option>
+                </select>
+            
+                <button id="create" class="height">Create</button>
+
+            </div> 
+
+            <div class="field">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h3>Created by Marych Kostiantyn</h3>
+    </footer>
+
+    <script src="./dist/main.js"></script>
+</body>
+</html>

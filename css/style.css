@@ -1,0 +1,312 @@
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?89453025");
+  src: url("../font/fontello.eot?89453025#iefix") format("embedded-opentype"), url("../font/fontello.woff2?89453025") format("woff2"), url("../font/fontello.woff?89453025") format("woff"), url("../font/fontello.ttf?89453025") format("truetype"), url("../font/fontello.svg?89453025#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-search:before {
+  content: '\e800';
+  color: grey;
+  font-size: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+button {
+  padding: 10px 25px;
+  border-radius: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: none;
+  font-size: 16px;
+}
+
+header {
+  border-bottom: 2px solid black;
+  padding: 20px;
+}
+
+main {
+  min-height: 80vh;
+  position: relative;
+}
+
+main .createEditWindow {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  display: none;
+}
+
+main .createEditWindow .subCont {
+  width: 300px;
+  height: 430px;
+  border: 2px solid black;
+  margin: 70px auto;
+  background: white;
+  padding: 20px;
+}
+
+main .createEditWindow .subCont #title {
+  font-size: 16px;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+main .createEditWindow .subCont #description {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+main .createEditWindow .subCont #subPriority {
+  width: 100%;
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 100px;
+}
+
+main .createEditWindow .subCont #cancel,
+main .createEditWindow .subCont #save {
+  width: 49%;
+}
+
+main .mainCont {
+  width: 95%;
+  height: 95%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+main .mainCont .height {
+  height: 40px;
+}
+
+main .mainCont .inpDiv {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .mainCont .inpDiv label {
+  width: 40%;
+  position: relative;
+}
+
+main .mainCont .inpDiv label #search {
+  width: 100%;
+  font-size: inherit;
+  padding-left: 40px;
+}
+
+main .mainCont .inpDiv label:before {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+main .mainCont .inpDiv select {
+  width: 20%;
+  font-size: inherit;
+}
+
+main .mainCont .inpDiv #create {
+  padding: 10px 25px;
+  font-size: inherit;
+  border-radius: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: none;
+}
+
+main .mainCont .field {
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .mainCont .field .newTask {
+  border: 2px solid black;
+  width: 250px;
+  height: 250px;
+  margin-bottom: 10px;
+  padding: 10px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .mainCont .field .newTask .done {
+  width: 15px;
+  height: 15px;
+  border: 2px solid black;
+  position: absolute;
+  right: -2px;
+  top: -8px;
+  background: white;
+  display: none;
+}
+
+main .mainCont .field .newTask .done::before {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 7px;
+  border-bottom: 2px solid green;
+  border-right: 2px solid green;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-left: 2px;
+}
+
+main .mainCont .field .newTask p {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+}
+
+main .mainCont .field .newTask .priorityDiv {
+  width: 90px;
+  height: 40px;
+  border: 1px dashed black;
+  border-radius: 10%;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 40px;
+}
+
+main .mainCont .field .newTask .stateDiv {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 32px;
+  border: 1px solid black;
+  border-radius: 10%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+main .mainCont .field .newTask .stateMenu {
+  width: 100px;
+  height: 93px;
+  background: white;
+  border: 1px solid black;
+  position: absolute;
+  bottom: -84px;
+  right: 10px;
+  cursor: pointer;
+  text-align: center;
+  display: none;
+  z-index: 1;
+}
+
+main .mainCont .field .newTask .stateMenu .arrow {
+  width: 19px;
+  height: 19px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: -11px;
+  left: 46px;
+}
+
+main .mainCont .field .newTask .stateMenu .stateDone,
+main .mainCont .field .newTask .stateMenu .stateEdit,
+main .mainCont .field .newTask .stateMenu .stateDelete {
+  border-bottom: 1px solid black;
+  height: 30px;
+  line-height: 30px;
+  background: lightgray;
+}
+
+main .mainCont .field .newTask .stateMenu .stateDelete {
+  border-bottom: none;
+}
+
+main .mainCont .field .newTask .stateMenu .stateDone:hover,
+main .mainCont .field .newTask .stateMenu .stateEdit:hover,
+main .mainCont .field .newTask .stateMenu .stateDelete:hover {
+  background: white;
+}
+
+main .mainCont .field .newTask .show {
+  display: block;
+}
+
+footer {
+  border-top: 2px solid black;
+  padding: 20px;
+}
+/*# sourceMappingURL=style.css.map */
